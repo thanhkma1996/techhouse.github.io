@@ -1,7 +1,7 @@
 
  <?php
    include "../config.php";
-  $sotin1trang = 5;
+  $sotin1trang = 3;
   if( isset($_GET["trang"]) ){
  	$trang = $_GET["trang"];
  	settype($trang, "int");

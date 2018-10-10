@@ -1,0 +1,66 @@
+RewriteEngine On
+RewriteRule ^trang-chu$ index.php
+RewriteRule ^quan-li-web$ admin.php
+RewriteRule ^gioi-thieu$ index.php?quanly=introduce
+RewriteRule ^tin-tuc$ index.php?quanly=news_category
+RewriteRule ^gio-hang$ index.php?quanly=cart
+RewriteRule ^ki-yeu$ index.php?quanly=ky
+
+################################################
+
+
+###################### RewriteRule chi tiet
+#rewrite danh muc san pham index.php?quanly=product&id=1
+RewriteRule ^san-pham/danh-muc/(.*)/(.*)$ index.php?quanly=product&id=$1
+
+#rewrite chi tiet san oham index.php?quanly=product_detail&id=1
+RewriteRule ^san-pham/chi-tiet/(.*)$ index.php?quanly=product_detail&id=$1
+
+#RewriteRule ^gioi-thieu/chi-tiet/(.*)$ index.php?quanly=introduce_detail&id=26
+RewriteRule ^gioi-thieu/chi-tiet/(.*)$ index.php?quanly=introduce_detail&id=$1
+
+############################################################################
+
+RewriteRule ^tin-tuc/chi-tiet/(.*)$ index.php?quanly=news_detail&id=$1
+#RewriteRule ^chinh-sach/chi-tiet/(.*)$ index.php?quanly=policy_detail&id=2
+RewriteRule ^chinh-sach/chi-tiet/(.*)$ index.php?quanly=policy_detail&id=$1
+
+
+RewriteRule ^dieu-khoan/chi-tiet/(.*)$ index.php?quanly=policy_detail&id=$1
+
+RewriteRule ^dang-nhap$ trang-chu?quanly=login
+
+RewriteRule ^dang-ki$ trang-chu?quanly=register
+
+RewriteRule ^gio-hang$ index.php?quanly=cart
+
+############################################################## Rewrite Trang
+RewriteRule ^san-pham/danh-muc/trang/(.*)/(.*)$ index.php?quanly=product&p=$1
+
+RewriteRule ^chinh-sach/trang/(.*)$ index.php?quanly=policy&p=$1
+
+RewriteRule ^tin-tuc/trang/(.*)$ index.php?quanly=news&p=$1
+
+
+
+##########################################
+
+RewriteRule ^thoat index.php?quanly=login&act=logout
+
+RewriteRule ^thanh-toan index.php?quanly=checkout
+
+########################################
+#index.php?quanly=cart&act=delete&id
+RewriteRule ^xoa-gio-hang/(.*)$ index.php?quanly=cart&act=delete&id=$1
+RewriteRule ^nang-cap index.php?quanly=cart&act=update"
+RewriteRule ^chon-san-pham/chi-tiet/(.*)$ index.php?quanly=cart&act=add&id=$1
+
+
+################################
+RewriteRule ^huy$ index.php?quanly=cart&act=destroy
+
+
+### đăng nhập fail
+RewriteRule ^loi-dang-nhap$ index.php?quanly=login&act=fail
+
+

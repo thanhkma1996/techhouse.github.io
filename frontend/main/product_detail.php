@@ -1,3 +1,4 @@
+
 <?php
         $sql = "select * from tbl_product where pk_product_id='$_GET[id]'";
         $result = mysqli_query($con,$sql);
@@ -5,7 +6,7 @@
 
 <div class="col-xs-12 col-md-9">
   <!-- main -->
-  <div class="product-detail" itemscope itemtype="http://schema.org/Product">
+  <div class="product-detail" itemscope itemtype="">
   <?php
         while($row = mysqli_fetch_array($result)){
    ?>
@@ -30,7 +31,7 @@
               <input type="number" id="qty" name="quantity" value="1" min="1" class="input-control" required="Không thể để trống">
             </div>
             <div class="action-btn">
-              <button class="button product-add-to-cart">Cho vào giỏ hàng</button>
+           <button class="button product-add-to-cart" name="add_order" onclick="location.href='index.php?quanly=cart&id=<?php echo $row['pk_product_id']; ?>'">Cho vào giỏ hàng</button>
             </div>
           </form>
         </div>
@@ -58,5 +59,6 @@
   </div>
 <?php  } ?>
   <!-- end main -->
+  <?php require "facebook.php"; ?>
 </div>
 </div>

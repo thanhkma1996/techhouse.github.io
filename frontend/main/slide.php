@@ -1,20 +1,40 @@
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-<!-- Indicators -->
-<ol class="carousel-indicators">
-  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-  <li data-target="#myCarousel" data-slide-to="1"></li>
-  <li data-target="#myCarousel" data-slide-to="2"></li>
-  <li data-target="#myCarousel" data-slide-to="3"></li>
-</ol>
 
-<!-- Wrapper for slides -->
-<div class="carousel-inner">
-  <div class="item active"> <img src="public/frontend/images/la.jpg" alt="Los Angeles"> </div>
-  <div class="item"> <img src="public/frontend/images/slideshow1221b.jpg" alt="Los Angeles"> </div>
-  <div class="item"> <img src="public/frontend/images/chicago.jpg" alt="Chicago"> </div>
-  <div class="item"> <img src="public/frontend/images/ny.jpg" alt="New York"> </div>
-</div>
+<?php
+    $sql = "select * from tbl_slide ";
+    $result = mysqli_query($con,$sql);
+    $count = mysqli_num_rows($result);
+ ?>
 
-<!-- Left and right controls -->
-</div>
-<!-- ============================ -->
+ <div id="myCarousel" class="carousel slide" data-ride="carousel">
+           <!-- Indicators -->
+           <ol class="carousel-indicators">
+           <?php
+             $n=0;
+            while($n<$count)
+             {
+               $n++;
+
+            ?>
+             <li data-target="#myCarousel" data-slide-to="<?php echo $n-1; ?>" class="<?php echo $n==1?"active":""; ?>"></li>
+             <?php } ?>
+           </ol>
+
+           <!-- Wrapper for slides -->
+           <div class="carousel-inner">
+               <?php
+                 $n=0;
+                 while($rows = mysqli_fetch_assoc($result))
+                 {
+                   $n++;
+                ?>
+        <div class="item <?php echo $n==1?"active":""; ?>" style="height: 500px;">
+         <a href="index.php?quanly=slide">
+           <img src="admin/backend/slide/upload/<?php echo $rows['c_img']; ?>" alt="">
+         </a>
+               </div>
+             <?php } ?>
+
+           </div>
+
+           <!-- Left and right controls -->
+           </div>

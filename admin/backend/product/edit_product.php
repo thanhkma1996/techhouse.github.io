@@ -24,6 +24,7 @@
 																move_uploaded_file($tmp_name,$path.$name);
 																$sql = "update tbl_product set c_img = '$img' where pk_product_id='$_GET[id]'";
 																mysqli_query($con,$sql);
+																		header('location:admin.php?quanly=product');
 
 													}
 										$sql = "update tbl_product set c_name='$c_name',c_price='$c_price',c_hotproduct='$c_hotproduct',c_description='$c_description',c_content='$c_content',fk_category_product_id=$fk_category_product_id where pk_product_id='$_GET[id]'";

@@ -2,12 +2,11 @@
 			include "../config.php";
 			if(isset($_POST["process"]))
 			{
-					$c_name = $_POST["c_name"];
-          $c_home = $_POST["c_home"];
+					$c_name = mysqli_escape_string($con,$_POST["c_name"]);
+          $c_home = mysqli_escape_string($con,$_POST["c_home"]);
 					$sql = "insert into tbl_category_product(c_name,c_home) values('$c_name','$c_home')";
 					mysqli_query($con,$sql);
 					header('location:admin.php?quanly=category_product');
-					echo $c_name;
 			}
 
  ?>

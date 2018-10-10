@@ -2,21 +2,21 @@
   <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-4">
-    <div class="image"> <img src="public/frontend/100/047/633/themes/517833/assets/ico-service-1221b.png?1481775169361" alt="Giao hàng miễn phí" title="Giao hàng miễn phí" class="img-responsive"> </div>
+    <div class="image"> <img src="public1/frontend/100/047/633/themes/517833/assets/ico-service-1221b.png?1481775169361" alt="Giao hàng miễn phí" title="Giao hàng miễn phí" class="img-responsive"> </div>
     <div class="info">
       <h3>Giao hàng miễn phí</h3>
       <p>Miễn phí giao hàng trong nội thành Hà Nội</p>
     </div>
     </div>
     <div class="col-xs-12 col-sm-4">
-    <div class="image"> <img src="public/frontend/100/047/633/themes/517833/assets/ico-service-2221b.png?1481775169361" class="img-responsive" alt="Khuyến mại" title="Khuyến mại"> </div>
+    <div class="image"> <img src="public1/frontend/100/047/633/themes/517833/assets/ico-service-2221b.png?1481775169361" class="img-responsive" alt="Khuyến mại" title="Khuyến mại"> </div>
     <div class="info">
       <h3>Khuyến mại</h3>
       <p>Khuyến mại sản phẩm nếu đơn hàng trên 1.000.000đ</p>
     </div>
     </div>
     <div class="col-xs-12 col-sm-4">
-    <div class="image"> <img src="public/frontend/100/047/633/themes/517833/assets/ico-service-3221b.png?1481775169361" class="img-responsive" alt="Hoàn trả lại tiền" title="Hoàn trả lại tiền"> </div>
+    <div class="image"> <img src="public1/frontend/100/047/633/themes/517833/assets/ico-service-3221b.png?1481775169361" class="img-responsive" alt="Hoàn trả lại tiền" title="Hoàn trả lại tiền"> </div>
     <div class="info">
       <h3>Hoàn trả lại tiền</h3>
       <p>Nếu sản phẩm không đảm bảo chất lượng hoặc sản phẩm không đúng miêu tả</p>
@@ -33,8 +33,8 @@
       <h3>Về chúng tôi</h3>
       <ul class="list-unstyled">
       <li><a href="index.php">Trang chủ</a></li>
-      <li><a href="gioi-thieu">Giới thiệu</a></li>
-      <li><a href="tin-tuc">Tin tức</a></li>
+      <li><a href="">Giới thiệu</a></li>
+      <li><a href="index.php?quanly=news_category">Tin tức</a></li>
       <li><a href="gioi-thieu">Liên hệ</a></li>
       </ul>
     </div>
@@ -66,7 +66,7 @@
       </ul>
     </div>
     </div>
-    <div class="payments-method"> <img src="public/frontend/100/047/633/themes/517833/assets/payments-method221b.png?1481775169361" alt="Phương thức thanh toán" title="Phương thức thanh toán"> </div>
+    <div class="payments-method"> <img src="public1/frontend/100/047/633/themes/517833/assets/payments-method221b.png?1481775169361" alt="Phương thức thanh toán" title="Phương thức thanh toán"> </div>
   </div>
   </div>
   <div class="bottom-footer">
@@ -85,11 +85,11 @@
   </div>
   </div>
 </footer>
-<script src='public/frontend/100/047/633/themes/517833/assets/owl.carousel.min221b.js?1481775169361' type='text/javascript'></script>
-<script src='public/frontend/100/047/633/themes/517833/assets/responsive-menu221b.js?1481775169361' type='text/javascript'></script>
-<script src='public/frontend/100/047/633/themes/517833/assets/elevate-zoom221b.js?1481775169361' type='text/javascript'></script>
-<script src='public/frontend/100/047/633/themes/517833/assets/main221b.js?1481775169361' type='text/javascript'></script>
-<script src='public/frontend/100/047/633/themes/517833/assets/ajax-cart221b.js?1481775169361' type='text/javascript'></script>
+<script src='public1/frontend/100/047/633/themes/517833/assets/owl.carousel.min221b.js?1481775169361' type='text/javascript'></script>
+<script src='public1/frontend/100/047/633/themes/517833/assets/responsive-menu221b.js?1481775169361' type='text/javascript'></script>
+<script src='public1/frontend/100/047/633/themes/517833/assets/elevate-zoom221b.js?1481775169361' type='text/javascript'></script>
+<script src='public1/frontend/100/047/633/themes/517833/assets/main221b.js?1481775169361' type='text/javascript'></script>
+<script src='public1/frontend/100/047/633/themes/517833/assets/ajax-cart221b.js?1481775169361' type='text/javascript'></script>
 <div class="ajax-error-modal modal">
   <div class="modal-inner">
   <div class="ajax-error-title">Lỗi</div>
@@ -99,7 +99,7 @@
 <div class="ajax-success-modal modal">
   <div class="overlay"></div>
   <div class="content col-xs-12">
-  <div class="ajax-left"> <img class="ajax-product-image" alt="&nbsp;" src="#" style="max-width:65px; max-height:100px"/> </div>
+  <div class="ajax-left"> <img class="ajax-product-image" alt="&nbsp;" src="" tyle="max-width:65px; max-height:100px"/> </div>
   <div class="ajax-right">
     <p class="ajax-product-title"></p>
     <p class="success-message btn-go-to-cart"><span style="color:#789629">&#10004;</span> Đã được thêm vào giỏ hàng.</p>

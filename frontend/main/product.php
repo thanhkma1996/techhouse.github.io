@@ -21,7 +21,7 @@
     <!-- box product -->
     <div class="col-xs-6 col-md-3 col-sm-6 ">
       <div class="product-grid" id="product-1168979">
-      <div class="image"> <a href="index.php?quanly=product_detail&pk_category_product_id=<?php echo $row['fk_category_product_id'] ?>&id=<?php echo $row['pk_product_id'] ?>"><img src="admin/backend/product/upload/<?php echo $row['c_img']; ?>" title="Sản phẩm ..." alt="Sản phẩm 2" class="img-responsive"></a> </div>
+      <div class="image"> <a href="index.php?quanly=product_detail&pk_category_product_id=<?php echo $row['fk_category_product_id'] ?>&id=<?php echo $row['pk_product_id'] ?>"><img src="admin/backend/product/upload/<?php echo $row['c_img']; ?>"   class="img-responsive"></a> </div>
       <div class="info">
         <h3 class="name"><a href="index.php?quanly=product_detail&pk_category_product_id=<?php echo $row['fk_category_product_id'] ?>&id=<?php echo $row['pk_product_id'] ?>"><?php echo $row['c_name']; ?></a></h3>
         <p class="price-box"> <span class="special-price"> <span class="price product-price"><?php echo $row['c_price']; ?></span> </span> </p>
@@ -64,7 +64,7 @@
     <!-- box product -->
     <div class="col-xs-6 col-md-3 col-sm-6 ">
       <div class="product-grid" id="product-1168979">
-      <div class="image"> <a href="index.php?quanly=product_detail&pk_category_product_id=<?php echo $row1['fk_category_product_id'] ?>&id=<?php echo $row1['pk_product_id'] ?>"><img src="admin/backend/product/upload/<?php echo $row1['c_img']; ?>" title="<?php echo $row1['c_name']; ?>" alt="<?php echo $row['c_name']; ?>" class="img-responsive"></a> </div>
+      <div class="image"> <a href="index.php?quanly=product_detail&pk_category_product_id=<?php echo $row1['fk_category_product_id'] ?>&id=<?php echo $row1['pk_product_id'] ?>"><img src="admin/backend/product/upload/<?php echo $row1['c_img']; ?>"   class="img-responsive"></a> </div>
       <div class="info">
         <h3 class="name"><a href="index.php?quanly=product_detail&pk_category_product_id=<?php echo $row1['fk_category_product_id'] ?>&id=<?php echo $row1['pk_product_id'] ?>"><?php echo $row1['c_name']; ?></a></h3>
         <p class="price-box"> <span class="special-price"> <span class="price product-price"><?php echo $row1['c_price']; ?></span> </span> </p>
@@ -89,7 +89,7 @@
 </div>
 
 <!-- adv -->
-<div class="widebanner"> <a href="#"><img src="public/frontend/100/047/633/themes/517833/assets/widebanner221b.jpg?1481775169361" alt="#" class="img-responsive"></a> </div>
+<?php require "adv_footer.php"  ?>
 <!-- end adv -->
 
 </div>

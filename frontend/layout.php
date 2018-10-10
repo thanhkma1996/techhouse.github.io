@@ -53,7 +53,7 @@
     <?php require "main/hot_news.php"; ?>
     <!-- end hot news -->
     <!-- adv -->
-    <img src="public1/frontend/images/banner03d5.jpg">
+    <?php require "main/adv_product.php" ?>
     <!-- end adv -->
 
     </div>

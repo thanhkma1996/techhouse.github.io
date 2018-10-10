@@ -15,5 +15,6 @@
           <p><?php echo $row['c_description']; ?></p>
 
      </div>
+     <?php require "facebook.php"; ?>
 
      <!-- end main -->

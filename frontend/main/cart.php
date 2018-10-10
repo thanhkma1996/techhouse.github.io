@@ -1,3 +1,37 @@
+<?php
+                  //khởi tạo giỏ hàng
+                  @session_start();
+                  if(!isset($_SESSION['cart']))
+                  ob_start();
+                  $_SESSION['cart'] = array();
+                  //===========
+                  $act = isset($_GET["act"]);
+
+                  switch($act){
+                  case "add":
+                      //add san pham vao gio hang bang cach goi ham cart_add
+                      include("cart_action/add_cart.php");
+                      echo "<script language='javascript'>location.href='index.php?quanly=cart';</script>";
+                      break;
+                  case "delete":
+                  //xoa phan tu khoi $_SESSION["cart"] bang cach goi ham cart_delete
+                       include("cart_action/delete_cart.php");
+                       echo "<script language='javascript'>location.href='index.php?quanly=cart';</script>";
+                       break;
+                  case "update":
+                  //duyet cac phan tu trong sessin array, update lai tung phan tu
+                        include("cart_action/update_cart.php");
+                        echo "<script language='javascript'>location.href='nang-cap';</script>";
+                        break;
+                  case "destroy":
+                  //xoa toan bo gio hang bang cach goi ham cart_destroy
+                        include("cart_action/destroy_cart.php");
+                  echo "<script language='javascript'>location.href='index.php?quanly=cart';</script>";
+                  break;
+                  }
+                  //===========
+
+ // ?>
 <div class="template-cart">
   <form action="index.php?quanly=cart&act=update" method="post">
     <div class="table-responsive">
@@ -13,22 +47,20 @@
           </tr>
         </thead>
         <tbody>
+          <?php
+                  foreach(($_SESSION["cart"][' $_GET[id]']) as $product)
+                  {
+                    print_r($product);
+                 ?>
           <tr>
-            <td><img src="public/upload/product/1494416685000000000010021355-may-tinh-xach-tay-lenovo-ideapad-flex-2-14e284.jpg" class="img-responsive" /></td>
-            <td><a href="index.php?quanly=product_detail&id=5">Sản phẩm 2</a></td>
-            <td> 2,000,000₫ </td>
-            <td><input type="number" id="qty" min="1" class="input-control" value="1" name="product_5" required="Không thể để trống"></td>
-            <td><p><b>2,000,000₫</b></p></td>
+            <td><img src="admin/backend/product/upload/<?php $product['c_img']; ?>" class="img-responsive" /></td>
+            <td><a href="index.php?quanly=tbl_product_detail&id=5"><?php $product['c_name'];  ?></a></td>
+            <td> <?php echo $row['c_price']; ?> </td>
+            <td><input type="number" id="qty" min="1" class="input-control" value="1" name="tbl_product_5" required="Không thể để trống"></td>
+            <td><p><b> <?php echo $row['c_price']; ?></b></p></td>
             <td><a href="index.php?quanly=cart&act=delete&id=5" data-id="2479395"><i class="fa fa-trash"></i></a></td>
           </tr>
-          <tr>
-            <td><img src="public/upload/product/1494416707canon-mp237-017de3.jpg" class="img-responsive" /></td>
-            <td><a href="index.php?quanly=product_detail&id=9">Sản phẩm 5</a></td>
-            <td> 2,000,000₫ </td>
-            <td><input type="number" id="qty" min="1" class="input-control" value="1" name="product_9" required="Không thể để trống"></td>
-            <td><p><b>2,000,000₫</b></p></td>
-            <td><a href="index.php?quanly=cart&act=delete&id=9" data-id="2479395"><i class="fa fa-trash"></i></a></td>
-          </tr>
+        <?php } ?>
         </tbody>
         <tfoot>
           <tr>
@@ -41,6 +73,6 @@
   </form>
   <div class="total-cart"> Tổng tiền thanh toán:
     4,000,000₫ <br>
-    <a href="index.php?quanly=checkout" class="button black">Thanh toán</a> </div>
+    <a href="index.php?quanly=checkout" class="button black" name="order" >Thanh toán</a> </div>
 </div>
 <!-- end main -->

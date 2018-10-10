@@ -17,7 +17,7 @@
 
 																$path = "backend/news/upload/";
 																$tmp_name = $_FILES['c_img']['tmp_name'];
-																$name = $_FILES['c_img']['name'];
+																$name =  $_FILES['c_img']['name'];
 
 																move_uploaded_file($tmp_name,$path.$name);
 																$sql = "update tbl_news set c_img = '$img' where pk_news_id='$_GET[id]'";

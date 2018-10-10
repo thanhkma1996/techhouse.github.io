@@ -46,6 +46,25 @@
           }elseif ($row == 'delete_news') {
                   include('backend/news/delete_news.php');
           }
+          // order
+          elseif ($row == 'order') {
+                  include('backend/order/order.php');
+          }elseif ($row == 'order_detail') {
+                  include('backend/order/order_detail.php');
+          }elseif($row == 'delete_order'){
+                  include('backend/order/delete_order.php');
+          }
+          // adv
+          elseif ($row == 'adv') {
+                  include('backend/adv/adv.php');
+          }elseif ($row == 'edit_adv') {
+                  include('backend/adv/edit_adv.php');
+          }elseif($row == 'delete_adv'){
+                  include('backend/adv/delete_adv.php');
+          }
+          elseif($row == 'add_adv'){
+                  include('backend/adv/add_adv.php');
+          }
 
 
  ?>

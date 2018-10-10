@@ -20,8 +20,9 @@
 																move_uploaded_file($tmp_name,$path.$name);
 											$sql = "update tbl_slide set c_img = '$img' where pk_slide_id='$_GET[id]'";
 											mysqli_query($con,$sql);
+											header('location:admin.php?quanly=slide');
 															}
-										$sql = "update tbl_slide set c_name='$c_name',c_hotslide='$c_hotslide',c_img='$img' where pk_slide_id='$_GET[id]'";
+										$sql = "update tbl_slide set c_name='$c_name',c_hotslide='$c_hotslide' where pk_slide_id='$_GET[id]'";
 									 	mysqli_query($con,$sql);
 										header('location:admin.php?quanly=slide');
 								}
